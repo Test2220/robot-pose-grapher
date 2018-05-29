@@ -1,5 +1,6 @@
 import csv
 import time
+import math
 from networktables import NetworkTables
 
 # To see messages from networktables, you must setup logging
@@ -10,7 +11,7 @@ NetworkTables.initialize()
 sd = NetworkTables.getTable("SmartDashboard")
 
 time.sleep(2)
-with open('path.csv') as csvfile:
+with open('test_path.csv') as csvfile:
     time.sleep(1)
     reader = csv.DictReader(csvfile)
     for row in reader:
@@ -18,7 +19,9 @@ with open('path.csv') as csvfile:
         x = x * 12
         y = float(row['y'])
         y = y * 12.0
+        angle = math.degrees(float(row['heading'])) + 0.1
         sd.putNumber('Field X', y)
         sd.putNumber('Field Y', x)
-        print(x, y)
+        sd.putNumber('Path Actual Heading', angle)
+        print(x, y, angle)
         time.sleep(0.01)

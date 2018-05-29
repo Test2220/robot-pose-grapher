@@ -9,7 +9,7 @@ from networktables import NetworkTables
 #logging.basicConfig(level=logging.DEBUG)
 
 # As a client to connect to a robot
-NetworkTables.initialize(server='10.22.20.2')
+NetworkTables.initialize(server='127.0.1.1')
 
 def drawField(plax):
     #Calculate field length and width in inches
