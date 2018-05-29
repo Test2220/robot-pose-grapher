@@ -14,7 +14,8 @@ NetworkTables.initialize(server='10.22.20.2')
 def drawField(plax):
     #Calculate field length and width in inches
     fieldDim = [12*27, 12*54]
-    
+
+    plt.figure(num="FRC 2220 Robot Pose Grapher")
     #Draw individual elements
     fieldBoundary = [(29.69, 0), (fieldDim[0]-29.69, 0), (fieldDim[0], 35.0), (fieldDim[0], fieldDim[1]-35.0), (fieldDim[0]-29.69, fieldDim[1]), (29.69, fieldDim[1]), (0, fieldDim[1]-35.0), (0, 35.0), (29.69, 0)]
     plax.plot([p[0] for p in fieldBoundary], [p[1] for p in fieldBoundary], color="black")
@@ -49,7 +50,8 @@ def drawField(plax):
     plax.plot([p[0] for p in powerCubeZoneClose], [p[1] for p in powerCubeZoneClose], linestyle=':', color="black")
     powerCubeZoneFar = [(161.69-22.5, fieldDim[1]-140), (161.69-22.5, fieldDim[1]-140+42.0), (161.69+22.5, fieldDim[1]-140+42.0), (161.69+22.5, fieldDim[1]-140)]
     plax.plot([p[0] for p in powerCubeZoneFar], [p[1] for p in powerCubeZoneFar], linestyle=':', color="black")
-    
+
+
 #Rotate a point p around a second point center by an angle (in degrees)
 def rotatePoint(p, center, angle):
     s = math.sin(math.radians(angle))
@@ -136,7 +138,7 @@ def updatePoint(n, point, pathpoint, robot, actualPath, targetPath):
     return [point, pathpoint, robot, actualPath, targetPath]
 
 #Generate the figure and draw static elements
-fig = plt.figure()
+fig = plt.figure(num="FRC 2220 Robot Pose Grapher")
 ax = fig.add_subplot(111, aspect='equal')
 drawField(ax)
 targetPath, = ax.plot(pxdata, pydata, color='red', alpha=0.5)

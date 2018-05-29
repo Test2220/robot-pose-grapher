@@ -6,7 +6,7 @@
 
 * **FRC 2841** - *Initial work* - [2481 Repo](https://github.com/Frc2481/frc-2018)
 
-Custom modifications by Gagan Bhat
+Custom modifications by Gagan Bhat.
 	
 
 ## Getting Started
