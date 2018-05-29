@@ -19,7 +19,7 @@ with open('test_path.csv') as csvfile:
         x = x * 12
         y = float(row['y'])
         y = y * 12.0
-        angle = math.degrees(float(row['heading'])) + 0.1
+        angle = float(row['heading'])
         sd.putNumber('Field X', y)
         sd.putNumber('Field Y', x)
         sd.putNumber('Path Actual Heading', angle)

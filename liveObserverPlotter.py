@@ -54,13 +54,13 @@ def drawField(plax):
 
 #Rotate a point p around a second point center by an angle (in degrees)
 def rotatePoint(p, center, angle):
-    s = math.sin(math.radians(angle))
-    c = math.cos(math.radians(angle))
+    s = math.sin(angle)
+    c = math.cos(angle)
     
-    px = p[0]- center[0]
-    py = p[1] - center[1]
-    pxn = px*c - py*s
-    pyn = px*s + py*c
+    py = p[0]- center[0]
+    px = p[1] - center[1]
+    pxn = px * s - py * c
+    pyn = px * c + py * s
     
     px = pxn + center[0]
     py = pyn + center[1]
