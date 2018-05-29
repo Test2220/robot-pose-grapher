@@ -19,6 +19,6 @@ Necessary things to edit or run parts of this project
 
 ```
 Python 2 or higher. 
-IDE to edit python code --> IntelliJ with Python Plugin; Visual Studio Code
+IDE to edit python code --> IntelliJ with Python Plugin; Visual Studio Code with Python add on.
 ```
 
